@@ -40,7 +40,8 @@ class RegistrationFormType extends AbstractType
                 'second_options' => ['label' => 'Repeat Password'],
                 'constraints' => [
                     new NotBlank(),
-                    new Regex("/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/")
+                    new Regex("/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/"),
+                    'message' => 'Your password must have at least 1 upper-case letter, one lower-case letter, 1 special character, 1 number and must be at least 12 characters long'
                 ]
             ]);
         ;
